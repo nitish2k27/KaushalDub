@@ -48,7 +48,7 @@ cd frontend && npm install
 ```
 
 Copy `.env.example` to `.env`, add your keys, then run `backend/scripts/dev.py` and `npm run dev` in `frontend/`.
-Full setup, Supabase and deployment steps: [docs/SETUP.md](docs/SETUP.md).
+Full setup: [docs/SETUP.md](docs/SETUP.md) · Supabase: [docs/SUPABASE_SETUP.md](docs/SUPABASE_SETUP.md) · Hosting: [docs/HOSTING.md](docs/HOSTING.md).
 
 ## Folder structure
 
