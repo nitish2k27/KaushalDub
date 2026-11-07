@@ -1,0 +1,874 @@
+{
+ "bEBEOuaQcag": [
+  [
+   "check the foreign matter in the mouse",
+   31.0,
+   34.0
+  ],
+  [
+   "check the breath of the patient",
+   35.0,
+   44.0
+  ],
+  [
+   "press the chest of the patient",
+   48.0,
+   72.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   80.0,
+   85.0
+  ]
+ ],
+ "TYbUtWKH_28": [
+  [
+   "press the chest of the patient",
+   8.0,
+   12.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   27.0,
+   29.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   33.0,
+   35.0
+  ]
+ ],
+ "l19Yqz8l7_Y": [
+  [
+   "check the foreign matter in the mouse",
+   12.0,
+   14.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   14.0,
+   16.0
+  ],
+  [
+   "check the breath of the patient",
+   22.0,
+   23.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   28.0,
+   32.0
+  ],
+  [
+   "press the chest of the patient",
+   33.0,
+   44.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   44.0,
+   48.0
+  ],
+  [
+   "press the chest of the patient",
+   49.0,
+   53.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   54.0,
+   55.0
+  ]
+ ],
+ "KGRGw48KhcU": [
+  [
+   "check the foreign matter in the mouse",
+   47.0,
+   53.0
+  ],
+  [
+   "check the foreign matter in the mouse",
+   55.0,
+   59.0
+  ],
+  [
+   "press the chest of the patient",
+   62.0,
+   72.0
+  ],
+  [
+   "press the chest of the patient",
+   84.0,
+   89.0
+  ]
+ ],
+ "Dh6Hypuiuww": [
+  [
+   "press the chest of the patient",
+   41.0,
+   61.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   65.0,
+   69.0
+  ],
+  [
+   "press the chest of the patient",
+   71.0,
+   90.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   93.0,
+   98.0
+  ],
+  [
+   "press the chest of the patient",
+   104.0,
+   109.0
+  ]
+ ],
+ "5e9vLjD10mk": [
+  [
+   "line up the protector and the cellphone",
+   11.0,
+   19.0
+  ],
+  [
+   "paste protector on the screen",
+   20.0,
+   27.0
+  ],
+  [
+   "remove the original protector",
+   28.0,
+   31.0
+  ],
+  [
+   "wipe the screen",
+   32.0,
+   35.0
+  ],
+  [
+   "paste protector on the screen",
+   56.0,
+   75.0
+  ]
+ ],
+ "8swvjCSo324": [
+  [
+   "wipe the screen",
+   13.0,
+   22.0
+  ],
+  [
+   "line up the protector and the cellphone",
+   23.0,
+   30.0
+  ],
+  [
+   "paste protector on the screen",
+   31.0,
+   33.0
+  ]
+ ],
+ "2AljhCWuVDw": [
+  [
+   "wipe the screen",
+   20.0,
+   33.0
+  ],
+  [
+   "remove the original protector",
+   42.0,
+   45.0
+  ],
+  [
+   "line up the protector and the cellphone",
+   48.0,
+   57.0
+  ],
+  [
+   "paste protector on the screen",
+   58.0,
+   60.0
+  ],
+  [
+   "wipe the screen",
+   61.0,
+   68.0
+  ]
+ ],
+ "gyjaRD5BDks": [
+  [
+   "paste protector on the screen",
+   20.0,
+   29.0
+  ],
+  [
+   "wipe the screen",
+   39.0,
+   57.0
+  ],
+  [
+   "remove the original protector",
+   63.0,
+   66.0
+  ],
+  [
+   "line up the protector and the cellphone",
+   71.0,
+   81.0
+  ],
+  [
+   "wipe the screen",
+   82.0,
+   96.0
+  ]
+ ],
+ "p3vNXh56g-M": [
+  [
+   "wipe the screen",
+   18.0,
+   39.0
+  ],
+  [
+   "remove the original protector",
+   44.0,
+   49.0
+  ],
+  [
+   "line up the protector and the cellphone",
+   50.0,
+   78.0
+  ],
+  [
+   "paste protector on the screen",
+   79.0,
+   85.0
+  ],
+  [
+   "remove the original protector",
+   86.0,
+   87.0
+  ],
+  [
+   "wipe the screen",
+   92.0,
+   110.0
+  ]
+ ],
+ "sU9E2fFi72Q": [
+  [
+   "clean the scratch",
+   42.0,
+   47.0
+  ],
+  [
+   "apply polishing paste on the surface",
+   48.0,
+   49.0
+  ],
+  [
+   "clean the scratch",
+   50.0,
+   61.0
+  ],
+  [
+   "clean the scratch",
+   64.0,
+   66.0
+  ],
+  [
+   "apply polishing paste on the surface",
+   67.0,
+   68.0
+  ],
+  [
+   "clean the scratch",
+   69.0,
+   79.0
+  ],
+  [
+   "apply polishing paste on the surface",
+   83.0,
+   88.0
+  ],
+  [
+   "clean the scratch",
+   90.0,
+   92.0
+  ]
+ ],
+ "leAtV-mSUCA": [
+  [
+   "apply polishing paste on the surface",
+   5.0,
+   6.0
+  ],
+  [
+   "clean the scratch",
+   10.0,
+   38.0
+  ]
+ ],
+ "cv6MCa7HOLw": [
+  [
+   "apply polishing paste on the surface",
+   21.0,
+   24.0
+  ],
+  [
+   "clean the scratch",
+   25.0,
+   45.0
+  ]
+ ],
+ "cawLxX-e3WI": [
+  [
+   "polish with polisher",
+   32.0,
+   41.0
+  ],
+  [
+   "polish with polisher",
+   55.0,
+   57.0
+  ],
+  [
+   "apply polishing paste on the surface",
+   62.0,
+   65.0
+  ],
+  [
+   "polish with polisher",
+   66.0,
+   71.0
+  ]
+ ],
+ "zomjIJTBdSM": [
+  [
+   "apply polishing paste on the surface",
+   79.0,
+   81.0
+  ],
+  [
+   "polish with polisher",
+   83.0,
+   111.0
+  ],
+  [
+   "clean the scratch",
+   112.0,
+   118.0
+  ],
+  [
+   "apply polishing paste on the surface",
+   127.0,
+   128.0
+  ],
+  [
+   "polish with polisher",
+   129.0,
+   138.0
+  ],
+  [
+   "clean the scratch",
+   140.0,
+   146.0
+  ]
+ ],
+ "vcfNpDtVqOw": [
+  [
+   "knead the dough",
+   18.0,
+   21.0
+  ],
+  [
+   "knead the dough",
+   22.0,
+   27.0
+  ],
+  [
+   "knead the dough",
+   37.0,
+   38.0
+  ],
+  [
+   "knead the dough",
+   41.0,
+   43.0
+  ],
+  [
+   "unroll the dough",
+   44.0,
+   45.0
+  ],
+  [
+   "unroll the dough",
+   50.0,
+   55.0
+  ],
+  [
+   "add seasoning",
+   63.0,
+   67.0
+  ],
+  [
+   "add seasoning",
+   68.0,
+   71.0
+  ],
+  [
+   "bake pizza",
+   72.0,
+   75.0
+  ]
+ ],
+ "v6oiM19MmxQ": [
+  [
+   "knead the dough",
+   44.0,
+   48.0
+  ],
+  [
+   "add seasoning",
+   49.0,
+   55.0
+  ],
+  [
+   "add seasoning",
+   63.0,
+   69.0
+  ]
+ ],
+ "1Bek9nhwdEI": [
+  [
+   "add seasoning",
+   26.0,
+   30.0
+  ],
+  [
+   "add seasoning",
+   35.0,
+   41.0
+  ],
+  [
+   "bake pizza",
+   49.0,
+   56.0
+  ]
+ ],
+ "FNdyDazu3V4": [
+  [
+   "add seasoning",
+   8.0,
+   27.0
+  ],
+  [
+   "add seasoning",
+   62.0,
+   67.0
+  ],
+  [
+   "unroll the dough",
+   114.0,
+   117.0
+  ],
+  [
+   "add seasoning",
+   118.0,
+   129.0
+  ]
+ ],
+ "o4BLb0V9Weg": [
+  [
+   "bake pizza",
+   110.0,
+   125.0
+  ],
+  [
+   "add seasoning",
+   126.0,
+   148.0
+  ]
+ ],
+ "FVMUZh1U2pA": [
+  [
+   "take out some rice",
+   17.0,
+   20.0
+  ],
+  [
+   "soak and wash the rice",
+   22.0,
+   28.0
+  ],
+  [
+   "put the washed rice into the rice cooker",
+   29.0,
+   31.0
+  ],
+  [
+   "cook the rice by rice cooker",
+   38.0,
+   39.0
+  ]
+ ],
+ "dPHa3neuweU": [
+  [
+   "take out some rice",
+   3.0,
+   7.0
+  ],
+  [
+   "soak and wash the rice",
+   8.0,
+   13.0
+  ],
+  [
+   "put the washed rice into the rice cooker",
+   14.0,
+   33.0
+  ],
+  [
+   "cook the rice by rice cooker",
+   34.0,
+   51.0
+  ]
+ ],
+ "nSVYDpDsuos": [
+  [
+   "soak and wash the rice",
+   26.0,
+   30.0
+  ],
+  [
+   "take out some rice",
+   35.0,
+   38.0
+  ],
+  [
+   "put the washed rice into the rice cooker",
+   42.0,
+   43.0
+  ],
+  [
+   "cook the rice by rice cooker",
+   64.0,
+   81.0
+  ]
+ ],
+ "vbsjMBZxZTs": [
+  [
+   "take out some rice",
+   7.0,
+   21.0
+  ],
+  [
+   "put the washed rice into the rice cooker",
+   36.0,
+   47.0
+  ],
+  [
+   "cook the rice by rice cooker",
+   72.5,
+   76.0
+  ]
+ ],
+ "-eed1Kz-3DE": [
+  [
+   "take out some rice",
+   22.0,
+   42.0
+  ],
+  [
+   "soak and wash the rice",
+   44.0,
+   60.0
+  ],
+  [
+   "put the washed rice into the rice cooker",
+   67.0,
+   85.0
+  ],
+  [
+   "cook the rice by rice cooker",
+   86.0,
+   95.0
+  ]
+ ],
+ "9eR7x93WqA8": [
+  [
+   "pour the egg into the bowl",
+   41.0,
+   49.0
+  ],
+  [
+   "pour the egg into the pot",
+   67.0,
+   71.0
+  ],
+  [
+   "fry eggs",
+   72.0,
+   93.0
+  ],
+  [
+   "pour the egg onto the plate",
+   102.0,
+   112.0
+  ]
+ ],
+ "jbALNwE5cCQ": [
+  [
+   "pour the egg into the pot",
+   23.0,
+   24.0
+  ],
+  [
+   "fry eggs",
+   25.0,
+   30.0
+  ],
+  [
+   "pour the egg onto the plate",
+   31.0,
+   32.0
+  ]
+ ],
+ "GAN1s0AhZ-4": [
+  [
+   "pour the egg into the pot",
+   4.0,
+   5.0
+  ],
+  [
+   "fry eggs",
+   6.0,
+   40.0
+  ],
+  [
+   "pour the egg onto the plate",
+   44.0,
+   48.0
+  ]
+ ],
+ "0gHV3DGatNY": [
+  [
+   "pour the egg into the pot",
+   14.0,
+   16.0
+  ],
+  [
+   "fry eggs",
+   17.0,
+   89.0
+  ],
+  [
+   "pour the egg onto the plate",
+   90.0,
+   98.0
+  ]
+ ],
+ "7NER1lAgNkw": [
+  [
+   "pour the egg into the bowl",
+   24.0,
+   25.0
+  ],
+  [
+   "stir the egg",
+   26.0,
+   31.0
+  ],
+  [
+   "pour the egg into the pot",
+   54.0,
+   56.0
+  ],
+  [
+   "fry eggs",
+   59.0,
+   68.0
+  ],
+  [
+   "put seasoning in the egg",
+   73.0,
+   76.0
+  ]
+ ],
+ "czr_jFII8sI": [
+  [
+   "check the breath of the patient",
+   2.0,
+   4.0
+  ],
+  [
+   "do artificial breathing to the patient",
+   17.0,
+   22.0
+  ],
+  [
+   "press the chest of the patient",
+   29.0,
+   41.0
+  ],
+  [
+   "press the chest of the patient",
+   53.0,
+   64.0
+  ]
+ ],
+ "egFAYXo4Ycc": [
+  [
+   "wipe the screen",
+   18.0,
+   47.0
+  ],
+  [
+   "line up the protector and the cellphone",
+   54.0,
+   74.0
+  ],
+  [
+   "paste protector on the screen",
+   75.0,
+   79.0
+  ],
+  [
+   "wipe the screen",
+   80.0,
+   87.0
+  ]
+ ],
+ "2l6O-U8I0Co": [
+  [
+   "wipe the screen",
+   7.0,
+   23.0
+  ],
+  [
+   "remove the original protector",
+   25.0,
+   28.0
+  ],
+  [
+   "wipe the screen",
+   30.0,
+   37.0
+  ],
+  [
+   "remove the original protector",
+   43.0,
+   51.0
+  ],
+  [
+   "line up the protector and the cellphone",
+   53.0,
+   57.0
+  ],
+  [
+   "paste protector on the screen",
+   58.0,
+   65.0
+  ],
+  [
+   "wipe the screen",
+   67.0,
+   71.0
+  ],
+  [
+   "paste protector on the screen",
+   72.0,
+   88.0
+  ],
+  [
+   "wipe the screen",
+   96.0,
+   99.0
+  ]
+ ],
+ "2a3lOJUXgVk": [
+  [
+   "apply polishing paste on the surface",
+   21.0,
+   22.0
+  ],
+  [
+   "clean the scratch",
+   23.0,
+   27.0
+  ],
+  [
+   "apply polishing paste on the surface",
+   39.0,
+   40.0
+  ],
+  [
+   "polish with polisher",
+   41.0,
+   46.0
+  ]
+ ],
+ "0fkLtdTbJMw": [
+  [
+   "knead the dough",
+   37.0,
+   45.0
+  ],
+  [
+   "knead the dough",
+   49.0,
+   50.0
+  ],
+  [
+   "knead the dough",
+   54.0,
+   60.0
+  ],
+  [
+   "unroll the dough",
+   61.0,
+   63.0
+  ],
+  [
+   "unroll the dough",
+   65.0,
+   66.0
+  ],
+  [
+   "unroll the dough",
+   68.0,
+   72.0
+  ],
+  [
+   "add seasoning",
+   73.0,
+   81.0
+  ],
+  [
+   "add seasoning",
+   89.0,
+   94.0
+  ]
+ ],
+ "tVBL6hq2m5c": [
+  [
+   "pour the egg into the pot",
+   14.0,
+   16.0
+  ],
+  [
+   "fry eggs",
+   17.0,
+   34.0
+  ],
+  [
+   "pour the egg onto the plate",
+   35.0,
+   37.0
+  ]
+ ]
+}

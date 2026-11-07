@@ -1,0 +1,18 @@
+# API + CPU worker (Hugging Face Space). Versions pinned to what the tests ran with.
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+httpx==0.28.1
+pyjwt[crypto]==2.15.1
+cryptography==50.0.2
+pydantic-settings==2.16.2
+python-multipart==0.0.33
+rq==3.0.0
+redis==8.1.0
+numpy==2.4.6
+scipy==1.17.1
+soundfile==0.14.0
+yt-dlp==2026.10.26
+imageio-ffmpeg
+requests
+google-genai
+huggingface_hub

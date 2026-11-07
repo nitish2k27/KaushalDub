@@ -1,0 +1,10 @@
+# Model stages (step recogniser, Whisper, AI4Bharat). Install on the worker that runs them.
+-r requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+open_clip_torch
+transformers
+accelerate
+sentencepiece
+onnxruntime
+virtualenv

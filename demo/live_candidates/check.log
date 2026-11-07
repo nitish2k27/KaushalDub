@@ -1,0 +1,70 @@
+model loaded in 6.9s on cpu
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+== cpr_st_john_czr_jFII8sI.mp4  (PerformCPR, 75s)  step model: 117.2s on CPU
+   1.    2.0-   5.5s  press the chest of the patient                conf 0.53  LOW
+   2.   23.5-  27.0s  press the chest of the patient                conf 0.56  LOW
+   3.   31.0-  36.5s  press the chest of the patient                conf 0.43  LOW
+   4.   36.5-  39.0s  do artificial breathing to the patient        conf 0.47  LOW
+   5.   54.5-  63.0s  press the chest of the patient                conf 0.67
+   ground truth: 2-4s check the breath of the patient | 17-22s do artificial breathing to the patient | 29-41s press the chest of the patient | 53-64s press the chest of the patient
+   macro-F1 36.6  F1@50 22.2  frame accuracy 71.8%
+   est. cost for Hindi + Kannada: all-Sarvam ₹4.03, Whisper local + Sarvam ₹3.42, all local ₹0
+
+== omelet_fried_egg_tVBL6hq2m5c.mp4  (CookOmelet, 50s)  step model: 43.0s on CPU
+   1.    8.0-  12.5s  pour the egg into the bowl                    conf 0.36  LOW
+   2.   12.5-  15.5s  stir the egg                                  conf 0.29  LOW
+   3.   15.5-  35.0s  fry eggs                                      conf 0.65
+   4.   35.0-  40.5s  pour the egg onto the plate                   conf 0.37  LOW
+   5.   43.0-  46.0s  fry eggs                                      conf 0.42  LOW
+   ground truth: 14-16s pour the egg into the pot | 17-34s fry eggs | 35-37s pour the egg onto the plate
+   macro-F1 34.3  F1@50 25.0  frame accuracy 67.0%
+   est. cost for Hindi + Kannada: all-Sarvam ₹4.86, Whisper local + Sarvam ₹4.45, all local ₹0
+
+== pizza_deep_dish_0fkLtdTbJMw.mp4  (MakePizza, 113s)  step model: 90.7s on CPU
+   1.    0.0-  19.0s  add seasoning                                 conf 0.72
+   2.   38.5-  46.5s  knead the dough                               conf 0.51  LOW
+   3.   53.5-  61.0s  knead the dough                               conf 0.40  LOW
+   4.   61.0-  71.5s  unroll the dough                              conf 0.48  LOW
+   5.   71.5-  85.0s  add seasoning                                 conf 0.92
+   6.   91.5-  94.5s  add seasoning                                 conf 0.68
+   ground truth: 37-45s knead the dough | 49-50s knead the dough | 54-60s knead the dough | 61-63s unroll the dough | 65-66s unroll the dough | 68-72s unroll the dough | 73-81s add seasoning | 89-94s add seasoning
+   macro-F1 68.8  F1@50 40.0  frame accuracy 69.0%
+   est. cost for Hindi + Kannada: all-Sarvam ₹7.62, Whisper local + Sarvam ₹6.69, all local ₹0
+
+== polish_uae_2a3lOJUXgVk.mp4  (PolishCar, 60s)  step model: 50.3s on CPU
+   1.   16.0-  19.5s  clean the scratch                             conf 0.51  LOW
+   2.   23.0-  27.5s  clean the scratch                             conf 0.47  LOW
+   3.   38.5-  43.5s  apply polishing paste on the surface          conf 0.37  LOW
+   4.   43.5-  47.0s  polish with polisher                          conf 0.35  LOW
+   5.   47.0-  50.5s  clean the scratch                             conf 0.40  LOW
+   6.   50.5-  53.0s  polish with polisher                          conf 0.48  LOW
+   7.   53.0-  55.5s  clean the scratch                             conf 0.56  LOW
+   ground truth: 21-22s apply polishing paste on the surface | 23-27s clean the scratch | 39-40s apply polishing paste on the surface | 41-46s polish with polisher
+   macro-F1 49.9  F1@50 18.2  frame accuracy 69.2%
+   est. cost for Hindi + Kannada: all-Sarvam ₹4.04, Whisper local + Sarvam ₹3.55, all local ₹0
+
+== screen_iphonex_2l6O-U8I0Co.mp4  (ReplaceMobileScreenProtector, 106s)  step model: 123.2s on CPU
+   1.   15.5-  35.0s  wipe the screen                               conf 0.47  LOW
+   2.   43.5-  50.0s  wipe the screen                               conf 0.50  LOW
+   3.   54.0-  56.0s  paste protector on the screen                 conf 0.39  LOW
+   4.   67.5-  70.0s  wipe the screen                               conf 0.36  LOW
+   5.   70.0-  87.0s  paste protector on the screen                 conf 0.64
+   6.   96.5-  99.5s  wipe the screen                               conf 0.31  LOW
+   ground truth: 7-23s wipe the screen | 25-28s remove the original protector | 30-37s wipe the screen | 43-51s remove the original protector | 53-57s line up the protector and the cellphone | 58-65s paste protector on the screen | 67-71s wipe the screen | 72-88s paste protector on the screen | 96-99s wipe the screen
+   macro-F1 39.6  F1@50 40.0  frame accuracy 61.3%
+   est. cost for Hindi + Kannada: all-Sarvam ₹6.61, Whisper local + Sarvam ₹5.75, all local ₹0
+
+== screen_sparin_egFAYXo4Ycc.mp4  (ReplaceMobileScreenProtector, 94s)  step model: 63.8s on CPU
+   1.   16.0-  50.0s  wipe the screen                               conf 0.67
+   2.   50.0-  55.0s  remove the original protector                 conf 0.40  LOW
+   3.   55.0-  58.5s  wipe the screen                               conf 0.44  LOW
+   4.   60.5-  71.0s  line up the protector and the cellphone       conf 0.46  LOW
+   5.   71.0-  78.0s  paste protector on the screen                 conf 0.42  LOW
+   6.   84.5-  88.5s  wipe the screen                               conf 0.31  LOW
+   7.   88.5-  90.5s  remove the original protector                 conf 0.38  LOW
+   ground truth: 18-47s wipe the screen | 54-74s line up the protector and the cellphone | 75-79s paste protector on the screen | 80-87s wipe the screen
+   macro-F1 54.1  F1@50 36.4  frame accuracy 69.5%
+   est. cost for Hindi + Kannada: all-Sarvam ₹7.84, Whisper local + Sarvam ₹7.08, all local ₹0
+
+saved D:\llm-project\kaushaldub\demo\demo_check.json

@@ -1,0 +1,457 @@
+{
+ "models": {
+  "clip_tcn": {
+   "target_macro_f1": 42.3,
+   "target_f1@50": 34.3,
+   "target_edit": 45.7,
+   "target_bf1@2s": 43.6,
+   "target_acc": 71.2,
+   "target_ece": 4.9,
+   "target_ece_raw": 3.9,
+   "trained5_macro_f1": 48.5,
+   "trained5_f1@50": 36.1,
+   "trained5_edit": 49.5,
+   "trained5_bf1@2s": 42.0,
+   "trained5_acc": 70.4,
+   "trained5_ece": 7.9,
+   "trained5_ece_raw": 5.7,
+   "minutes": 1.2,
+   "per_task_macro_f1": {
+    "BoilNoodles": 44.3,
+    "MakePizza": 62.2,
+    "PerformCPR": 37.5,
+    "PolishCar": 47.1,
+    "ReplaceMobileScreenProtector": 42.2,
+    "UseRiceCookerToCookRice": 53.5
+   },
+   "test_videos": {
+    "BoilNoodles": 1,
+    "MakePizza": 20,
+    "PerformCPR": 17,
+    "PolishCar": 15,
+    "ReplaceMobileScreenProtector": 23,
+    "UseRiceCookerToCookRice": 14
+   }
+  },
+  "resnet_bilstm": {
+   "target_macro_f1": 37.9,
+   "target_f1@50": 30.9,
+   "target_edit": 44.3,
+   "target_bf1@2s": 39.7,
+   "target_acc": 67.5,
+   "target_ece": 5.5,
+   "target_ece_raw": 15.6,
+   "trained5_macro_f1": 42.7,
+   "trained5_f1@50": 33.3,
+   "trained5_edit": 44.5,
+   "trained5_bf1@2s": 37.8,
+   "trained5_acc": 67.5,
+   "trained5_ece": 9.3,
+   "trained5_ece_raw": 17.7,
+   "minutes": 3.8,
+   "per_task_macro_f1": {
+    "BoilNoodles": 22.3,
+    "MakePizza": 58.2,
+    "PerformCPR": 31.8,
+    "PolishCar": 41.0,
+    "ReplaceMobileScreenProtector": 40.7,
+    "UseRiceCookerToCookRice": 41.8
+   },
+   "test_videos": {
+    "BoilNoodles": 1,
+    "MakePizza": 20,
+    "PerformCPR": 17,
+    "PolishCar": 15,
+    "ReplaceMobileScreenProtector": 23,
+    "UseRiceCookerToCookRice": 14
+   }
+  },
+  "xclip_linear": {
+   "target_macro_f1": 37.4,
+   "target_f1@50": 26.0,
+   "target_edit": 46.2,
+   "target_bf1@2s": 49.0,
+   "target_acc": 68.3,
+   "target_ece": 5.4,
+   "target_ece_raw": 10.4,
+   "trained5_macro_f1": 44.8,
+   "trained5_f1@50": 27.3,
+   "trained5_edit": 45.5,
+   "trained5_bf1@2s": 45.5,
+   "trained5_acc": 68.2,
+   "trained5_ece": 6.3,
+   "trained5_ece_raw": 10.0,
+   "minutes": 0.6,
+   "per_task_macro_f1": {
+    "BoilNoodles": 22.1,
+    "MakePizza": 58.8,
+    "PerformCPR": 32.3,
+    "PolishCar": 44.0,
+    "ReplaceMobileScreenProtector": 35.9,
+    "UseRiceCookerToCookRice": 53.2
+   },
+   "test_videos": {
+    "BoilNoodles": 1,
+    "MakePizza": 20,
+    "PerformCPR": 17,
+    "PolishCar": 15,
+    "ReplaceMobileScreenProtector": 23,
+    "UseRiceCookerToCookRice": 14
+   }
+  },
+  "clip_bilstm": {
+   "target_macro_f1": 44.3,
+   "target_f1@50": 34.9,
+   "target_edit": 47.8,
+   "target_bf1@2s": 42.3,
+   "target_acc": 70.4,
+   "target_ece": 5.9,
+   "target_ece_raw": 11.7,
+   "trained5_macro_f1": 49.1,
+   "trained5_f1@50": 37.6,
+   "trained5_edit": 50.9,
+   "trained5_bf1@2s": 40.6,
+   "trained5_acc": 69.8,
+   "trained5_ece": 8.0,
+   "trained5_ece_raw": 13.5,
+   "minutes": 5.8,
+   "per_task_macro_f1": {
+    "BoilNoodles": 16.8,
+    "MakePizza": 52.1,
+    "PerformCPR": 39.4,
+    "PolishCar": 50.9,
+    "ReplaceMobileScreenProtector": 42.7,
+    "UseRiceCookerToCookRice": 60.7
+   },
+   "test_videos": {
+    "BoilNoodles": 1,
+    "MakePizza": 20,
+    "PerformCPR": 17,
+    "PolishCar": 15,
+    "ReplaceMobileScreenProtector": 23,
+    "UseRiceCookerToCookRice": 14
+   }
+  },
+  "clip_zero_shot": {
+   "target_macro_f1": 16.7,
+   "target_f1@50": 7.4,
+   "target_edit": 29.8,
+   "target_bf1@2s": 28.6,
+   "target_acc": 27.5,
+   "target_ece": 16.3,
+   "trained5_macro_f1": 16.7,
+   "trained5_f1@50": 7.4,
+   "trained5_edit": 29.8,
+   "trained5_bf1@2s": 28.6,
+   "trained5_acc": 27.5,
+   "trained5_ece": 16.3,
+   "minutes": 0,
+   "per_task_macro_f1": {
+    "PerformCPR": 16.0,
+    "PolishCar": 21.4,
+    "ReplaceMobileScreenProtector": 12.6
+   },
+   "test_videos": {
+    "PerformCPR": 17,
+    "PolishCar": 15,
+    "ReplaceMobileScreenProtector": 23
+   }
+  }
+ },
+ "curve": {
+  "5": {
+   "macro_f1": 25.5,
+   "f1@50": 10.1
+  },
+  "10": {
+   "macro_f1": 29.6,
+   "f1@50": 21.0
+  },
+  "20": {
+   "macro_f1": 33.6,
+   "f1@50": 28.1
+  },
+  "all": {
+   "macro_f1": 43.9,
+   "f1@50": 32.9
+  }
+ },
+ "few_shot": {
+  "prototype_K0": {
+   "macro_f1": 15.7,
+   "f1@50": 1.2,
+   "edit": 12.5,
+   "acc": 63.9
+  },
+  "prototype_K1": {
+   "macro_f1": 18.6,
+   "f1@50": 9.7,
+   "edit": 31.2,
+   "acc": 60.0
+  },
+  "prototype_K5": {
+   "macro_f1": 25.6,
+   "f1@50": 14.4,
+   "edit": 35.2,
+   "acc": 59.5
+  },
+  "finetune_K5": {
+   "macro_f1": 28.5,
+   "f1@50": 21.2,
+   "edit": 33.3,
+   "acc": 73.8
+  },
+  "prototype_K10": {
+   "macro_f1": 25.8,
+   "f1@50": 11.0,
+   "edit": 36.1,
+   "acc": 58.6
+  },
+  "finetune_K10": {
+   "macro_f1": 31.0,
+   "f1@50": 21.3,
+   "edit": 35.1,
+   "acc": 71.2
+  }
+ },
+ "dubcheck_steps": {
+  "macro_f1": 79.3,
+  "f1@50": 80.0,
+  "edit": 100.0,
+  "acc": 82.8,
+  "bf1@2s": 75.0,
+  "pred_steps": 5,
+  "gt_steps": 5,
+  "video_s": 119.6
+ },
+ "timings": {
+  "video": 6.4,
+  "asr_load_whisper": 47.1,
+  "asr_whisper": 13.6,
+  "asr_indicconformer": 24.0,
+  "asr_sarvam": 13.0,
+  "steps": 11.9,
+  "llm": 154.5,
+  "mt_indictrans2": 70.3,
+  "mt_sarvam": 14.7,
+  "tts_indicparler": 237.8,
+  "tts_sarvam": 30.9,
+  "dub_hi": 5.0,
+  "dub_kn": 4.3
+ },
+ "placement": {
+  "hi": {
+   "max_speed": 1.036,
+   "overflow_s": 0.0,
+   "sped_up": 1,
+   "clips": 5
+  },
+  "kn": {
+   "max_speed": 1.0,
+   "overflow_s": 0.0,
+   "sped_up": 0,
+   "clips": 5
+  }
+ },
+ "tts": {
+  "indicparler": {
+   "audio_s": 71.1,
+   "synth_s": 237.8,
+   "rtf": 3.34
+  },
+  "sarvam": {
+   "audio_s": 59.2,
+   "synth_s": 30.9,
+   "rtf": 0.52
+  }
+ },
+ "asr": {
+  "wer_whisper_vs_sarvam": 4.5,
+  "words_sarvam": 89,
+  "words_whisper": 87,
+  "whisper_adds_music_tag": true
+ },
+ "mt_agreement_chrf": {
+  "hi": 75.8,
+  "kn": 69.8
+ },
+ "mt_chars": {
+  "hi": {
+   "indictrans2": 440,
+   "sarvam": 422
+  },
+  "kn": {
+   "indictrans2": 464,
+   "sarvam": 458
+  }
+ },
+ "llm_grounding": {
+  "content_words": 34,
+  "unsupported": [
+   "artery",
+   "carotid",
+   "immediately",
+   "pausing",
+   "rescue",
+   "resume",
+   "s"
+  ],
+  "supported_pct": 76.5,
+  "quiz_items": 3
+ },
+ "unseen_cpu": {
+  "videos": 10,
+  "macro_f1_mean": 41.0,
+  "macro_f1_range": [
+   25.0,
+   68.8
+  ],
+  "frame_acc_mean": 66.4,
+  "cpu_s_per_video_s": 1.11,
+  "rows": [
+   {
+    "video": "car_polishing_sU9E2fFi72Q.mp4",
+    "task": "PolishCar",
+    "duration_s": 99.7,
+    "steps": 5,
+    "gt_steps": 8,
+    "macro_f1": 33.3,
+    "f1@50": 30.8,
+    "cpu_seconds": 178.8
+   },
+   {
+    "video": "cpr_nz_red_cross_bEBEOuaQcag.mp4",
+    "task": "PerformCPR",
+    "duration_s": 95.3,
+    "steps": 2,
+    "gt_steps": 4,
+    "macro_f1": 25.0,
+    "f1@50": 0.0,
+    "cpu_seconds": 76.8
+   },
+   {
+    "video": "margherita_pizza_vcfNpDtVqOw.mp4",
+    "task": "MakePizza",
+    "duration_s": 100.2,
+    "steps": 3,
+    "gt_steps": 9,
+    "macro_f1": 30.7,
+    "f1@50": 0.0,
+    "cpu_seconds": 84.9
+   },
+   {
+    "video": "screen_protector_5e9vLjD10mk.mp4",
+    "task": "ReplaceMobileScreenProtector",
+    "duration_s": 80.9,
+    "steps": 4,
+    "gt_steps": 5,
+    "macro_f1": 37.6,
+    "f1@50": 40.0,
+    "cpu_seconds": 141.5
+   },
+   {
+    "video": "cpr_st_john_czr_jFII8sI.mp4",
+    "task": "PerformCPR",
+    "duration_s": 75.0,
+    "steps": 5,
+    "gt_steps": 4,
+    "macro_f1": 36.6,
+    "f1@50": 22.2,
+    "cpu_seconds": 117.2
+   },
+   {
+    "video": "omelet_fried_egg_tVBL6hq2m5c.mp4",
+    "task": "CookOmelet",
+    "duration_s": 50.0,
+    "steps": 5,
+    "gt_steps": 3,
+    "macro_f1": 34.3,
+    "f1@50": 25.0,
+    "cpu_seconds": 43.0
+   },
+   {
+    "video": "pizza_deep_dish_0fkLtdTbJMw.mp4",
+    "task": "MakePizza",
+    "duration_s": 113.3,
+    "steps": 6,
+    "gt_steps": 8,
+    "macro_f1": 68.8,
+    "f1@50": 40.0,
+    "cpu_seconds": 90.7
+   },
+   {
+    "video": "polish_uae_2a3lOJUXgVk.mp4",
+    "task": "PolishCar",
+    "duration_s": 60.0,
+    "steps": 7,
+    "gt_steps": 4,
+    "macro_f1": 49.9,
+    "f1@50": 18.2,
+    "cpu_seconds": 50.3
+   },
+   {
+    "video": "screen_iphonex_2l6O-U8I0Co.mp4",
+    "task": "ReplaceMobileScreenProtector",
+    "duration_s": 106.3,
+    "steps": 6,
+    "gt_steps": 9,
+    "macro_f1": 39.6,
+    "f1@50": 40.0,
+    "cpu_seconds": 123.2
+   },
+   {
+    "video": "screen_sparin_egFAYXo4Ycc.mp4",
+    "task": "ReplaceMobileScreenProtector",
+    "duration_s": 93.7,
+    "steps": 7,
+    "gt_steps": 4,
+    "macro_f1": 54.1,
+    "f1@50": 36.4,
+    "cpu_seconds": 63.8
+   }
+  ]
+ },
+ "batch": {
+  "per_domain": {
+   "Car care": {
+    "n": 5,
+    "inr_mean": 4.34,
+    "min_mean": 5.4,
+    "len_mean": 90,
+    "steps_mean": 3.6
+   },
+   "Phone repair": {
+    "n": 5,
+    "inr_mean": 4.43,
+    "min_mean": 4.5,
+    "len_mean": 89,
+    "steps_mean": 4.8
+   },
+   "First aid": {
+    "n": 5,
+    "inr_mean": 4.13,
+    "min_mean": 4.6,
+    "len_mean": 86,
+    "steps_mean": 4.0
+   },
+   "Cooking": {
+    "n": 15,
+    "inr_mean": 3.83,
+    "min_mean": 4.3,
+    "len_mean": 104,
+    "steps_mean": 3.8
+   }
+  },
+  "videos": 30,
+  "inr_total": 121.98,
+  "inr_all_attempts": 127.33,
+  "inr_mean": 4.07,
+  "min_mean": 4.6,
+  "inr_per_video_minute": 2.53,
+  "llm_used": {
+   "GeminiWriter": 1,
+   "GroqWriter": 29
+  },
+  "template_fallbacks": 0
+ }
+}

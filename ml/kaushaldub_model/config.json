@@ -1,0 +1,101 @@
+{
+ "backbone": {
+  "name": "ViT-B-16-quickgelu",
+  "pretrained": "openai",
+  "library": "open_clip"
+ },
+ "model": {
+  "din": 512,
+  "emb": 512,
+  "ch": 128,
+  "layers": 6,
+  "stages": 2
+ },
+ "fps": 2,
+ "max_frames": 900,
+ "min_len_s": 2.0,
+ "low_conf": 0.6,
+ "vocab": {
+  "ReplaceMobileScreenProtector": [
+   "background",
+   "wipe the screen",
+   "remove the original protector",
+   "paste protector on the screen",
+   "line up the protector and the cellphone"
+  ],
+  "PerformCPR": [
+   "background",
+   "press the chest of the patient",
+   "do artificial breathing to the patient",
+   "check the breath of the patient",
+   "check the pulse of the patient",
+   "check the foreign matter in the mouse",
+   "call emergency number"
+  ],
+  "PolishCar": [
+   "background",
+   "clean the scratch",
+   "polish with polisher",
+   "apply polishing paste on the surface",
+   "clean the surface"
+  ],
+  "MakePizza": [
+   "background",
+   "add seasoning",
+   "unroll the dough",
+   "bake pizza",
+   "knead the dough"
+  ],
+  "UseRiceCookerToCookRice": [
+   "background",
+   "cook the rice by rice cooker",
+   "put the washed rice into the rice cooker",
+   "take out some rice",
+   "soak and wash the rice"
+  ],
+  "BoilNoodles": [
+   "background",
+   "pour the noodles into the water and stir",
+   "pour the cooked noodles",
+   "add seasoning to the boiling water",
+   "take a little bit noodles and taste it"
+  ],
+  "MakeCookie": [
+   "background",
+   "pour raw materials",
+   "mix raw materials",
+   "shape cookie",
+   "bake cookies"
+  ],
+  "CookOmelet": [
+   "background",
+   "fry eggs",
+   "pour the egg into the pot",
+   "stir the egg",
+   "pour the egg onto the plate",
+   "pour the egg into the bowl",
+   "put seasoning in the egg"
+  ]
+ },
+ "temperature": {
+  "MakePizza": 0.9710273550613946,
+  "PerformCPR": 0.9048435458792279,
+  "PolishCar": 1.241347249821856,
+  "ReplaceMobileScreenProtector": 1.1040362983234597,
+  "UseRiceCookerToCookRice": 0.7267076989704946
+ },
+ "trained_tasks": [
+  "ReplaceMobileScreenProtector",
+  "PerformCPR",
+  "PolishCar",
+  "MakePizza",
+  "UseRiceCookerToCookRice",
+  "BoilNoodles",
+  "MakeCookie"
+ ],
+ "fewshot_tasks": [
+  "CookOmelet"
+ ],
+ "smoke_test": false,
+ "created": "2026-11-06 20:34"
+}

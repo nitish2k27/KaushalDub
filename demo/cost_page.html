@@ -1,0 +1,216 @@
+<title>KaushalDub Running Costs</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Noto+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; summary cards, then calculator, measurements, playlist. KaushalDub's own tokens. */
+:root{
+  --bg:#F3F6F8;--surface:#FFFFFF;--ink:#12212B;--muted:#4F6170;--line:#D6DFE5;
+  --brand:#0B6E6E;--brand-ink:#FFFFFF;--brand-soft:#DDF1F0;
+  --accent:#9A4A06;--accent-soft:#FCEBD3;--good:#1B7338;--good-soft:#DDF3E4;
+  --f-display:'Sora','Noto Sans',system-ui,sans-serif;
+  --f-body:'Noto Sans','Noto Sans Devanagari',system-ui,sans-serif;
+  --f-mono:ui-monospace,'SFMono-Regular',Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C151B;--surface:#14212A;--ink:#E7EEF2;--muted:#9FB3C0;--line:#273740;
+  --brand:#52C7C2;--brand-ink:#04201F;--brand-soft:#123635;--accent:#F2A855;--accent-soft:#3A2A12;
+  --good:#5AD18A;--good-soft:#12301F;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C151B;--surface:#14212A;--ink:#E7EEF2;--muted:#9FB3C0;--line:#273740;
+  --brand:#52C7C2;--brand-ink:#04201F;--brand-soft:#123635;--accent:#F2A855;--accent-soft:#3A2A12;
+  --good:#5AD18A;--good-soft:#12301F;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1.2;text-wrap:balance}
+h1{font-size:clamp(26px,4vw,36px)}h2{font-size:21px}h3{font-size:16px}
+p{margin:0;max-width:68ch}
+.muted{color:var(--muted)}.small{font-size:13px}.tiny{font-size:12px}
+.lede{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
+section{display:flex;flex-direction:column;gap:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card.pick{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset}
+.big{font-family:var(--f-display);font-size:30px;font-variant-numeric:tabular-nums}
+.pill{display:inline-flex;align-items:center;border-radius:99px;padding:2px 10px;font-size:12px;font-weight:600;background:var(--brand-soft);color:var(--brand);width:fit-content}
+.pill.warn{background:var(--accent-soft);color:var(--accent)}.pill.good{background:var(--good-soft);color:var(--good)}
+.stack{display:flex;flex-direction:column;gap:4px}
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+label{font-weight:600;font-size:13px;display:flex;flex-direction:column;gap:6px}
+input[type=range]{accent-color:var(--brand);width:100%}
+input[type=number]{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-height:40px;width:100%}
+.out{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.chk{flex-direction:row;align-items:center;gap:8px;font-weight:500}
+.chk input{width:18px;height:18px;accent-color:var(--brand)}
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+th{text-align:left;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tfoot td{font-weight:600;background:var(--brand-soft)}
+a{color:var(--brand)}
+a:focus-visible,input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.dom{font-weight:600;color:var(--brand);white-space:nowrap}
+.star{color:var(--accent);font-weight:700}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;min-width:60px}
+.bar i{display:block;height:100%;background:var(--brand)}
+.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 14px;border-radius:0 10px 10px 0}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:72ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="lede">
+    <span class="eyebrow">KaushalDub · CS3235 Module 3</span>
+    <h1>What does it cost to dub one skill video?</h1>
+    <p class="muted">A 100-second how-to video, dubbed into Hindi and Kannada, with step text and a quiz. Three ways to run the
+      same pipeline (<code>ml/kd_pipeline.py</code>): paid Indian-language APIs, a hybrid, or free open-source models on a GPU.
+      Prices are Sarvam's official pay-as-you-go rates, checked 7 Nov 2026.</p>
+  </header>
+
+  <section aria-labelledby="sum">
+    <h2 id="sum">At a glance</h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section aria-labelledby="calc-h">
+    <h2 id="calc-h">Calculator</h2>
+    <div class="calc">
+      <label for="len">Video length <span class="out" id="lenOut"></span><input type="range" id="len" min="30" max="600" step="10" value="100"></label>
+      <label for="count">Number of videos<input type="number" id="count" min="1" max="10000" value="30"></label>
+      <label for="cover">Share of video inside steps <span class="out" id="coverOut"></span><input type="range" id="cover" min="0.3" max="1" step="0.05" value="0.65"></label>
+      <div class="stack"><span style="font-weight:600;font-size:13px">Dub into</span>
+        <label class="chk" for="lhi"><input type="checkbox" id="lhi" checked> Hindi</label>
+        <label class="chk" for="lkn"><input type="checkbox" id="lkn" checked> Kannada</label></div>
+      <label for="gpu">Rented GPU, ₹ per hour <span class="tiny muted">(only if Kaggle's free T4 is not used)</span><input type="number" id="gpu" min="0" step="5" value="40"></label>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>Stage</th><th>All APIs</th><th>Hybrid (app default)</th><th>All local (GPU)</th></tr></thead>
+      <tbody id="stages"></tbody>
+      <tfoot id="totals"></tfoot>
+    </table></div>
+    <p class="small muted" id="assump"></p>
+  </section>
+
+  <section aria-labelledby="meas-h">
+    <h2 id="meas-h">Measured on the four demo videos</h2>
+    <p class="muted small">The trained step model (CLIP ViT-B/16 → MS-TCN) ran on a laptop CPU. Cost is computed from the steps it actually found. The
+      videos are from the COIN test split, which the model never saw in training.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Video</th><th class="n">Length</th><th class="n">Steps found / COIN</th><th class="n">Macro-F1</th><th class="n">Step model (CPU)</th><th class="n">All APIs</th><th class="n">Hybrid</th><th class="n">Local</th></tr></thead>
+      <tbody id="meas"></tbody>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="pl-h">
+    <h2 id="pl-h">Demo playlist: 30 videos, 4 domains</h2>
+    <p class="muted small">Five COIN test-split videos per skill, every link checked on 7 Nov 2026. <span class="star">★</span> = live demo video.
+      Costs use the calculator's settings for languages and step share.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Domain</th><th>Video</th><th class="n">Length</th><th class="n">COIN steps</th><th class="n">All APIs</th><th class="n">Hybrid</th></tr></thead>
+      <tbody id="pl"></tbody>
+      <tfoot id="plTot"></tfoot>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="rec-h">
+    <h2 id="rec-h">Which one to use</h2>
+    <div class="cards">
+      <div class="card pick"><span class="pill good">Live demo</span><h3>Hybrid</h3>
+        <p class="small">Whisper on the server, Gemini free tier, Sarvam for translation and voice. Takes about 2 minutes a video with natural Bulbul voices,
+          at about ₹7 a video. The ₹100 sign-up credit covers the four demo videos several times over.</p></div>
+      <div class="card"><span class="pill">Bulk evaluation</span><h3>All local on Kaggle</h3>
+        <p class="small">IndicTrans2 and Indic Parler-TTS on the free T4 cost ₹0, but take 5–8 minutes a video. The 30-video playlist needs about 3–4 GPU
+          hours of the 30-hour weekly quota. Use this for the report's provider comparison.</p></div>
+      <div class="card"><span class="pill warn">Only if needed</span><h3>All APIs</h3>
+        <p class="small">Sarvam speech-to-text adds about ₹0.5 a minute. It helps for Hindi or Kannada speech, where Whisper-small is weaker. For
+          English instructors, Whisper is free and accurate enough.</p></div>
+    </div>
+    <div class="note small">Out of credits: Sarvam returns HTTP 402 when the prepaid balance is zero and never auto-charges unless auto-recharge is on.
+      KaushalDub then falls back to the local model for that stage, or pauses the job as "needs credits" with a Resume button.
+      Gemini and Groq free tiers return 429 when exhausted; the app retries, then falls back to Groq and finally to template text.</div>
+  </section>
+
+  <section aria-labelledby="src-h">
+    <h2 id="src-h">Sources and assumptions</h2>
+    <ul class="small">
+      <li>Sarvam pay-as-you-go, from <a href="https://www.sarvam.ai/api-pricing" rel="noopener" target="_blank">sarvam.ai/api-pricing</a>: speech to text ₹0.49/min,
+        translate ₹2.00 per 1,000 characters, Bulbul v3 voice ₹3.00 per 1,000 characters, ₹100 free credit. GST extra.</li>
+      <li>Narration length follows <code>build_prompt</code>: at most 2 words per second of step. The LLM usually fills about 70% of that, at about 5.8
+        characters per English word; Hindi and Kannada text is taken as 1.1× longer. Translation is billed on the English input, and the
+        quiz adds about 350 characters per language.</li>
+      <li>Gemini and Groq free tiers cost ₹0 within their rate limits. A paid Gemini Flash call for one video is far below ₹1.</li>
+      <li>Local timing on a Kaggle T4: Whisper-small about 15 s, step model about 10 s, IndicTrans2 about 30 s (first run also installs its
+        environment, 3–5 min), Indic Parler-TTS about 20 s per step clip (the dub-check notebook measured 24 s). Kaggle gives 30 free GPU hours a week.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+const RATE = { stt: 0.49, mt: 2.0 / 1000, tts: 3.0 / 1000 };
+const PLAYLIST = [["First aid","PerformCPR","bEBEOuaQcag","How To Perform CPR - New Zealand Red Cross",95,4,1],["First aid","PerformCPR","TYbUtWKH_28","How to perform CPR on an adult",40,3,0],["First aid","PerformCPR","l19Yqz8l7_Y","How to Perform CPR by John",64,8,0],["First aid","PerformCPR","KGRGw48KhcU","How TO PERFORM CPR",111,4,0],["First aid","PerformCPR","Dh6Hypuiuww","Adult One Person CPR",120,5,0],["Phone repair","ReplaceMobileScreenProtector","5e9vLjD10mk","Apply Screen Protector Bubble-free with Automatic Screen Film Attach Machine",81,5,1],["Phone repair","ReplaceMobileScreenProtector","8swvjCSo324","Samsung Galaxy 9H 3D Glass Screen Protector Installation Tutorial",51,3,0],["Phone repair","ReplaceMobileScreenProtector","2AljhCWuVDw","Urban Armor Gear (UAG) Glass Screen Protector - Installation Guide",80,5,0],["Phone repair","ReplaceMobileScreenProtector","gyjaRD5BDks","How To Apply And Remove A Screen Protector",103,5,0],["Phone repair","ReplaceMobileScreenProtector","p3vNXh56g-M","How to Install Tempered Glass Screen Protector on your Mobile",128,6,0],["Car care","PolishCar","sU9E2fFi72Q","CAR POLISHING",100,8,1],["Car care","PolishCar","leAtV-mSUCA","How to use Autoglym Super Resin Polish",45,2,0],["Car care","PolishCar","cv6MCa7HOLw","Mothers Polish - Waxing by Hand (How To Video)",50,2,0],["Car care","PolishCar","cawLxX-e3WI","Auto Detailing Buffing and Polishing Lake Country CCS Pads",87,4,0],["Car care","PolishCar","zomjIJTBdSM","Car Polishing with a RO Polisher to remove swirls",171,6,0],["Cooking","MakePizza","vcfNpDtVqOw","How to Make Margherita Pizza at Home | Gordon Ramsay",100,9,1],["Cooking","MakePizza","v6oiM19MmxQ","Easy to make Pizza Calzone - recipe",89,3,0],["Cooking","MakePizza","1Bek9nhwdEI","How to make Bread Slice Pizza at home",97,3,0],["Cooking","MakePizza","FNdyDazu3V4","How To Make a Hawaiian Pizza",138,4,0],["Cooking","MakePizza","o4BLb0V9Weg","Tawa Pizza Recipe in Hindi (Hindi speech)",159,2,0],["Cooking","UseRiceCookerToCookRice","FVMUZh1U2pA","Cooking White Rice with TIGER IH Rice Cooker",69,4,0],["Cooking","UseRiceCookerToCookRice","dPHa3neuweU","How to Cook Basmati Rice / Rice Cooker Recipes",71,4,0],["Cooking","UseRiceCookerToCookRice","nSVYDpDsuos","How to use Rice Cooker",126,4,0],["Cooking","UseRiceCookerToCookRice","vbsjMBZxZTs","How to make Basmati Rice - Cooker Method Recipe",127,3,0],["Cooking","UseRiceCookerToCookRice","-eed1Kz-3DE","Steamed Rice Recipe - Japanese Cooking 101",127,4,0],["Cooking","CookOmelet","9eR7x93WqA8","How to Properly Make an Omelet - Circulon",120,4,0],["Cooking","CookOmelet","jbALNwE5cCQ","All-Clad and Paul Kahan: How to Fry an Egg in Stainless",40,3,0],["Cooking","CookOmelet","GAN1s0AhZ-4","How to cook Fried Egg; Perfect Round",64,3,0],["Cooking","CookOmelet","0gHV3DGatNY","Crispy Fried Egg Over Easy",120,3,0],["Cooking","CookOmelet","7NER1lAgNkw","How to make fried tuna eggs",120,5,0]];
+const MEASURED = /*MEASURED*/[]/*END*/;
+
+const $ = (id) => document.getElementById(id);
+const inr = (x) => "₹" + (x < 10 ? x.toFixed(2) : x < 1000 ? x.toFixed(1) : Math.round(x).toLocaleString("en-IN"));
+const mins = (s) => s < 90 ? Math.round(s) + " s" : (s / 60).toFixed(1) + " min";
+const fmtLen = (s) => Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0");
+
+function model(lenS, cover, langs, steps) {
+  const stepS = lenS * cover;
+  const nSteps = steps || Math.max(2, Math.round(stepS / 18));
+  const words = Math.max(stepS * 2, nSteps * 4) * 0.7;
+  const en = words * 5.8;
+  const mtChars = (en + 350) * langs, ttsChars = en * 1.1 * langs;
+  const stt = lenS / 60 * RATE.stt, mt = mtChars * RATE.mt, tts = ttsChars * RATE.tts;
+  const clips = nSteps * langs;
+  return { nSteps, en, mtChars, ttsChars, stt, mt, tts, clips,
+    api: stt + mt + tts, hybrid: mt + tts,
+    tApi: 45 + lenS * 0.1 + clips * 3 + 30, tHyb: 45 + lenS * 0.6 + clips * 3 + 30,
+    tLocal: 15 + 10 + 30 + clips * 20 + 30 };
+}
+
+function render() {
+  const lenS = +$("len").value, n = Math.max(1, +$("count").value || 1), cover = +$("cover").value;
+  const langs = (+$("lhi").checked) + (+$("lkn").checked), gpu = +$("gpu").value || 0;
+  $("lenOut").textContent = fmtLen(lenS); $("coverOut").textContent = Math.round(cover * 100) + "%";
+  const m = model(lenS, cover, langs);
+  const gpuCost = m.tLocal / 3600 * gpu;
+  $("cards").innerHTML = [
+    ["All APIs", m.api, m.tApi, "Sarvam speech-to-text, translation and voice; Gemini free tier for step text.", ""],
+    ["Hybrid (app default)", m.hybrid, m.tHyb, "Whisper on the server, Gemini free, Sarvam translation and voice.", "pick"],
+    ["All local on a GPU", 0, m.tLocal, `Whisper, IndicTrans2, Indic Parler-TTS on Kaggle's free T4 (${inr(gpuCost)} on a rented GPU).`, ""],
+  ].map(([t, c, s, d, cls]) => `<div class="card ${cls}"><span class="small muted">${t}</span><span class="big">${inr(c)}</span>
+     <span class="small">per video · about ${mins(s)}</span><span class="tiny muted">${d}</span>
+     ${c > 0 ? `<span class="pill">${Math.floor(100 / c)} videos on the ₹100 free credit</span>` : `<span class="pill good">₹0 within Kaggle's 30 GPU h/week</span>`}</div>`).join("");
+  const row = (stage, a, h, l) => `<tr><td>${stage}</td><td>${a}</td><td>${h}</td><td>${l}</td></tr>`;
+  $("stages").innerHTML = [
+    row("Speech to text", `Sarvam · ${inr(m.stt)}`, "Whisper-small (CPU) · ₹0", "Whisper / IndicConformer (GPU) · ₹0"),
+    row("Steps (vision model)", "CLIP + MS-TCN · ₹0", "CLIP + MS-TCN · ₹0", "CLIP + MS-TCN · ₹0"),
+    row("Step text and quiz", "Gemini free · ₹0", "Gemini free · ₹0", "Gemini free or template · ₹0"),
+    row(`Translation (${Math.round(m.mtChars).toLocaleString("en-IN")} chars)`, `Sarvam · ${inr(m.mt)}`, `Sarvam · ${inr(m.mt)}`, "IndicTrans2 · ₹0"),
+    row(`Voice (${Math.round(m.ttsChars).toLocaleString("en-IN")} chars, ${m.clips} clips)`, `Bulbul v3 · ${inr(m.tts)}`, `Bulbul v3 · ${inr(m.tts)}`, "Indic Parler-TTS · ₹0"),
+  ].join("");
+  $("totals").innerHTML = `<tr><td>Per video</td><td>${inr(m.api)} · ${mins(m.tApi)}</td><td>${inr(m.hybrid)} · ${mins(m.tHyb)}</td><td>₹0 · ${mins(m.tLocal)}</td></tr>
+    <tr><td>${n} videos</td><td>${inr(m.api * n)}</td><td>${inr(m.hybrid * n)}</td><td>₹0 · ${(m.tLocal * n / 3600).toFixed(1)} GPU h${gpu ? ` (${inr(gpuCost * n)} rented)` : ""}</td></tr>`;
+  $("assump").textContent = langs ? `About ${m.nSteps} steps and ${Math.round(m.en / 5.8)} narration words per language for this length.` : "Pick at least one language.";
+
+  let ta = 0, th = 0, tl = 0;
+  $("pl").innerHTML = PLAYLIST.map(([d, task, id, title, len, steps, demo]) => {
+    const x = model(len, cover, langs, steps); ta += x.api; th += x.hybrid; tl += len;
+    return `<tr><td class="dom">${d}</td><td>${demo ? '<span class="star">★</span> ' : ""}<a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">${title}</a><br><span class="tiny muted">${task}</span></td>
+      <td class="n">${fmtLen(len)}</td><td class="n">${steps}</td><td class="n">${inr(x.api)}</td><td class="n">${inr(x.hybrid)}</td></tr>`;
+  }).join("");
+  $("plTot").innerHTML = `<tr><td colspan="2">30 videos · ${(tl / 60).toFixed(1)} minutes of video</td><td></td><td></td><td class="n">${inr(ta)}</td><td class="n">${inr(th)}</td></tr>`;
+
+  $("meas").innerHTML = MEASURED.length ? MEASURED.map((r) => `<tr><td>${r.video}<br><span class="tiny muted">${r.task}</span></td>
+      <td class="n">${fmtLen(r.duration_s)}</td><td class="n">${r.steps} / ${r.gt_steps ?? "–"}</td><td class="n">${r.macro_f1 ?? "–"}</td>
+      <td class="n">${r.cpu_seconds} s</td><td class="n">${inr(r.all_sarvam_inr)}</td><td class="n">${inr(r.whisper_plus_sarvam_inr)}</td><td class="n">₹0</td></tr>`).join("")
+    : `<tr><td colspan="8" class="muted">Run backend/scripts/demo_check.py to fill this table.</td></tr>`;
+}
+["len", "count", "cover", "lhi", "lkn", "gpu"].forEach((id) => $(id).addEventListener("input", render));
+render();
+</script>
