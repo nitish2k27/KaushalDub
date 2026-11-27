@@ -1,0 +1,18 @@
+KaushalDub - Deployment information
+====================================
+
+Project GitHub repository:
+https://github.com/nitish2k27/KaushalDub
+
+Deployed frontend (Vercel):
+https://kaushal-dub.vercel.app
+
+Database, login and file storage (Supabase, free tier): live in the cloud.
+
+Backend:
+The backend (FastAPI API + processing worker) is not hosted, because hosting it is not free of cost.
+It runs the step model (PyTorch + CLIP ViT-B/16), which needs about 1.5-2 GB of RAM, while free hosting
+plans give about 512 MB, and Hugging Face Docker Spaces now require a paid PRO account. The project was
+built to use free tiers only, so for the demo the backend runs on our laptop (http://localhost:8000)
+and the hosted frontend connects to it. A Dockerfile is ready (deploy/hf_space/) to host it on a paid
+plan later.
